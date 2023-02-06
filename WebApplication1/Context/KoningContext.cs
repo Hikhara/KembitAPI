@@ -3,9 +3,9 @@ using WebApplication1.Controllers;
 
 namespace WebApplication1.Context
 {
-    public class KasteelContext : DbContext
+    public class KoningContext : DbContext
     {
-        public KasteelContext(DbContextOptions <KasteelContext>options) : base(options)
+        public KoningContext(DbContextOptions<KoningContext> options) : base(options)
         {
 
         }
@@ -15,7 +15,7 @@ namespace WebApplication1.Context
         //    Kasteels = kasteels;
         //}
 
-        public DbSet<Kasteel> Kasteel { get; set; }
+        public DbSet<Koning> Koning { get; set; }
 
         //public static implicit operator KasteelContext(KasteelController v)
         //{

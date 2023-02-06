@@ -6,7 +6,7 @@ namespace WebApplication1
     public class Kasteel
     {
         public int Id { get; set; }
-        //[Required]
+        [Required]
         public string? Name { get; set; }
     }
 }

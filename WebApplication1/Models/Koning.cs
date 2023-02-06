@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+namespace WebApplication1
 {
     public class Koning
     {
@@ -10,7 +10,7 @@ namespace WebApplication1.Models
         public int CastleId { get; set; }
         public string? Name { get; set; }
         public string? Location { get; set; }
-        public string? Year { get; set; }
+        public int Year { get; set; }
 
     }
 }

@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 //builder.Services.AddDbContext<KasteelContext>(options => options.UseInMemoryDatabase("Kasteel"));
 builder.Services.AddDbContext<KasteelContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WebApplication1Context")));
+builder.Services.AddDbContext<KoningContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("WebApplication1Context")));
 
 //builder.Services.AddScoped<DbContext, KasteelContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
