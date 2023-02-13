@@ -10,6 +10,8 @@ namespace WebApplication1.Models
         public int CastleId { get; set; }
         public string? Name { get; set; }
         public string? Location { get; set; }
+
+        [Range(1, 2100)]
         public int Year { get; set; }
 
     }

@@ -57,9 +57,13 @@ namespace WebApplication1.Controllers
             };
 
             dbContext.Koning.Add(koning);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             dbContext.SaveChanges();
-
             return Ok(dbContext.Koning.ToList());
+
         }
         [HttpPut]
         [Route("{Id:int}")]
@@ -74,8 +78,12 @@ namespace WebApplication1.Controllers
                 koning.Location = updateKoning.Location;
                 koning.Year = updateKoning.Year;
 
-                dbContext.SaveChanges();
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
 
+                dbContext.SaveChanges();
                 return Ok(dbContext.Koning.ToList());
             };
 
